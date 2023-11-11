@@ -1,8 +1,145 @@
-body {
-    background-color: black;
-    color: red;
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    color: purple;
+main {
+    padding-bottom: 100px;
+}
+
+header {
+    background-color: #f8f9fa; /* A light grey background */
+    border-bottom: 1px solid #e1e4e8; /* A bottom border for some visual separation */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* This will push the nav-left and nav-right apart */
+    align-items: center; /* This will vertically center the navigation links */
+    max-width: 1000px; /* Max width of the content, you can adjust this */
+    margin: 0 auto; /* Center the nav in the page */
+    padding: 15px 5%;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+}
+
+.nav-left img {
+    height: 50px; /* Adjust the size of the logo */
+    margin-right: 20px; /* Margin between the logo and the first link */
+}
+
+.nav-left a, .nav-right a {
+    text-decoration: none; /* Remove the underline from links */
+    color: #7d7d7d; /* Dark grey color for the text */
+    margin-right: 20px;
+    font-weight: 500px;
+    padding: 10px 15px; /* Ajustar el espacio alrededor de los enlaces */
+    display: inline-block; /* Permite establecer un ancho y alto */
+}
+
+.nav-left a span, .nav-right a span {
+    display: block;
+}
+
+#nav-logo {
+    height: 60px; /* Ajustar según sea necesario */
+    margin-right: 20px;
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    color:blue ; /* Underline on hover for visual feedback */
+}
+
+
+/* Añadir a tus estilos existentes */
+
+.hero {
+    text-align: center;
+    padding: 40px 20px; /* Ajustar según se necesite */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px 0; /* Espacio arriba y abajo del botón */
+}
+
+#toggleInputButton {
+    padding: 10px 20px;
+    background-color: #0b5ed7; /* Un azul llamativo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Si es necesario, ajustar el espacio sobre el botón */
+}
+
+#toggleInputButton:hover {
+    background-color: #c80a2d; /* Un tono más oscuro al pasar el ratón */
+}
+  
+#inputContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#textToSpeak {
+    width: 70%; /* Ajustar según se necesite */
+    padding: 10px;
+    font-size: 16px; /* Tamaño de la fuente */
+    margin-top: 10px; /* Espacio antes del input */
+    border: 1px solid #ddd; /* Borde sutil para el input */
+    border-radius: 5px;
+}
+
+#harveyContainer {
+    margin: 10px auto;
+    max-width: 300px;
+    min-width: 100px;
+    width: 80%;
+    height: auto;
+}
+
+#harveyMouthClosed, #harveyMouthOpen {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: display 0.2s ease-in-out;
+}
+
+
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px; /* Ajustar según se necesite */
+    clear: both;
+    }
+
+.features section {
+    max-width: 300px; /* Ajustar según se necesite */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
 }

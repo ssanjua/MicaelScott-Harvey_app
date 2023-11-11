@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael's Robot</title>
-    <link href="/static/css/styles.css" rel="stylesheet">
+    <title>Harveys!</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" type="image/png" href="/static/images/micael-favicon.png">
 </head>
 <body>
-    <header>
-        <!-- Navegación y otros elementos de cabecera -->
-    </header>
 
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+<header>
+    <nav>
+        <div class="nav-left">
+            <img src="/static/images/michael.png" alt="Logo" id="nav-logo">
+            <a href="#what"><span>What</span><span>is this?</span></a>
+            <a href="#why"><span>Why</span><span>this app?</span></a>
+            <a href="#howmuch"><span>How much</span><span>Michael owe u?</span></a>
+        </div>
+        <div class="nav-right">
+            <a href="#who"><span>Who</span><span>am I?</span></a>
+            <a href="#contact"><span>Want to</span><span>tell me something?</span></a>
+            <a href="#rate"><span>Rate</span><span>this app</span></a>
+        </div>
+    </nav>
+</header>
 
-    <footer>
-        <h7>Footer</h7>
-    </footer>
+<main>
+    {% block content %}
+    <!-- El contenido específico de cada página irá aquí -->
+    {% endblock %}
+</main>
 
-    <script src="/static/js/script.js"></script>
+<footer>
+    <p>Contact me: mail@example.com | 2023</p>
+    <div class="social-icons">
+        <a href="www.facebook.com"><img src="/static/images/square-facebook.svg" alt="Facebook"></a>
+        <a href="www.linkedin.com"><img src="/static/images/linkedin.svg" alt="LinkedIn"></a>
+        <a href="www.instagram.com"><img src="/static/images/square-instagram.svg" alt="Instagram"></a>
+        <a href="www.github.com"><img src="/static/images/square-github.svg" alt="GitHub"></a>
+    </div>
+</footer>
+
+<script src="/static/js/script.js"></script>
+
 </body>
 </html>

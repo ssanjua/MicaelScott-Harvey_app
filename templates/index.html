@@ -1,6 +1,40 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <h1>Welcome to Michael's Robot j</h1>
-    <!-- Más contenido -->
+    <div class="hero">
+        <h1>Welcome to the Michael App</h1>
+        <p>Discover the world of text to speech with a fun twist!</p>
+    </div>
+
+  <!-- Botón para desplegar el input -->
+    <div class="button-container">
+        <button id="toggleInputButton">Speak to Me</button>
+    </div>
+
+    <!-- Input de texto inicialmente oculto -->
+    <div id="inputContainer" style="display:none;">
+        <input type="text" id="textToSpeak" placeholder="Me so horney me love you long tim." />
+        <button onclick="speakText()">Speak</button>
+    </div>
+
+    <div id="harveyContainer">
+        <img src="/static/images/harvey_mouthClosed.png" alt="Harvey Mouth Closed" id="harveyMouthClosed">
+        <img src="/static/images/harvey_mouthOpen.png" alt="Harvey Mouth Open" id="harveyMouthOpen" style="display: none;">
+    </div>
+
+  <div class="features">
+    <section>
+      <h2>Feature One</h2>
+      <p>Description of feature one.</p>
+    </section>
+    <section>
+      <h2>Feature Two</h2>
+      <p>Description of feature two.</p>
+    </section>
+    <section>
+      <h2>Feature Three</h2>
+      <p>Description of feature three.</p>
+    </section>
+  </div>
+  
 {% endblock %}
