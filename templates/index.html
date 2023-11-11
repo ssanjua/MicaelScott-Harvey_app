@@ -2,8 +2,8 @@
 
 {% block content %}
     <div class="hero">
-        <h1>Welcome to the Michael App</h1>
-        <p>Discover the world of text to speech with a fun twist!</p>
+        <h1>;;</h1>
+        <p>text to speech with a fun twist!</p>
     </div>
 
   <!-- Botón para desplegar el input -->
@@ -15,8 +15,14 @@
     <div id="inputContainer" style="display:none;">
         <input type="text" id="textToSpeak" placeholder="Me so horney me love you long tim." />
         <button onclick="speakText()">Speak</button>
+        <div id="recordingContainer">
+            <button id="startRecordingButton">Start Recording</button>
+            <button id="stopRecordingButton" disabled>Stop Recording</button>
+            <button id="sendAudioButton" disabled>Enviar Audio</button> 
+            <audio id="audioPlayback" controls></audio>
+        </div>
     </div>
-
+    
     <div id="harveyContainer">
         <img src="/static/images/harvey_mouthClosed.png" alt="Harvey Mouth Closed" id="harveyMouthClosed">
         <img src="/static/images/harvey_mouthOpen.png" alt="Harvey Mouth Open" id="harveyMouthOpen" style="display: none;">
