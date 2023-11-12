@@ -1,46 +1,55 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <div class="hero">
-        <h1>;;</h1>
-        <p>text to speech with a fun twist!</p>
-    </div>
-
+      
   <!-- Botón para desplegar el input -->
     <div class="button-container">
-        <button id="toggleInputButton">Speak to Me</button>
+        <button id="toggleInputButton">&lt; Push me &gt;</button>
     </div>
 
     <!-- Input de texto inicialmente oculto -->
-    <div id="inputContainer" style="display:none;">
-        <input type="text" id="textToSpeak" placeholder="Me so horney me love you long tim." />
-        <button onclick="speakText()">Speak</button>
-        <div id="recordingContainer">
-            <button id="startRecordingButton">Start Recording</button>
-            <button id="stopRecordingButton" disabled>Stop Recording</button>
-            <button id="sendAudioButton" disabled>Enviar Audio</button> 
-            <audio id="audioPlayback" controls></audio>
-        </div>
-    </div>
+    <div class="input-container" id="inputContainer" style="display:none;">
+      <input type="text" id="textToSpeak" placeholder="Me so horney me love you long tim...">
+      <button id="toggleVisibilityButton">&#128065;</button> <!-- Emoji de ojo abierto -->
+  </div>
     
     <div id="harveyContainer">
         <img src="/static/images/harvey_mouthClosed.png" alt="Harvey Mouth Closed" id="harveyMouthClosed">
         <img src="/static/images/harvey_mouthOpen.png" alt="Harvey Mouth Open" id="harveyMouthOpen" style="display: none;">
     </div>
 
+    <div class="button-container">
+      <button id="toggleInputButton">&lt; Try this &gt;</button>
+    </div>
+
+    <div class="input-container" id="inputContainer">
+      <input type="text" id="textToSpeak" placeholder="Me so horney me love you long tim...">
+      <button id="tryThisButton">Try</button>
+    </div>
+
+    <div class="input-container" id="inputContainer">
+      <input type="text" id="textToSpeak" placeholder="i i i i i,i,i,i,i i i i i i,i,i,i,i i i i">
+      <button id="tryThisButton">Try</button>
+    </div>
+
+    <div class="input-container" id="inputContainer">
+      <input type="text" id="textToSpeak" placeholder="s,s,s, ssss, s,s,s, ssss">
+      <button id="tryThisButton">Try</button>
+    </div>
+
   <div class="features">
     <section>
-      <h2>Feature One</h2>
-      <p>Description of feature one.</p>
+      <h2>He can talk!</h2>
+      <p>Harvey is Michael's own Robot.</p>
     </section>
     <section>
-      <h2>Feature Two</h2>
-      <p>Description of feature two.</p>
+      <h2>Hide!</h2>
+      <p>Hide what you want to say.</p>
     </section>
     <section>
-      <h2>Feature Three</h2>
-      <p>Description of feature three.</p>
+      <h2>Take a test!</h2>
+      <p>Discover how much of Michael are in your heart.</p>
     </section>
   </div>
-  
+
 {% endblock %}

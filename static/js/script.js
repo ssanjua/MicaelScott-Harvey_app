@@ -1,19 +1,37 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const toggleButton = document.getElementById('toggleInputButton');
+    const toggleInputButton = document.getElementById('toggleInputButton');
+    const toggleVisibilityButton = document.getElementById('toggleVisibilityButton');
     const inputContainer = document.getElementById('inputContainer');
     const textInput = document.getElementById('textToSpeak');
+    let isInputVisible = false;
 
-    toggleButton.addEventListener('click', () => {
-        if (inputContainer.style.display === 'none' || !inputContainer.style.display) {
-            inputContainer.style.display = 'block';
-            setTimeout(() => {
-                textToSpeak.focus();
-            }, 0);
+    toggleInputButton.addEventListener('click', () => {
+        isInputVisible = !isInputVisible;
+        inputContainer.style.display = isInputVisible ? 'block' : 'none';
+        if (isInputVisible) {
+            textInput.focus();
+        }
+    });
+
+    toggleVisibilityButton.addEventListener('click', () => {
+        if (textInput.type === 'text') {
+            textInput.type = 'password';
+            toggleVisibilityButton.innerHTML = '&#128584;'; // Ojo abierto
         } else {
-            inputContainer.style.display = 'none';
+            textInput.type = 'text';
+            toggleVisibilityButton.innerHTML = '&#128065;'; // Ojo cerrado (o cualquier otro icono que prefieras)
+        }
+        textInput.focus(); // Mantener el foco en el input
+    });
+
+    textInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            speakText();
+            event.preventDefault(); // Prevenir cualquier acción predeterminada del Enter
         }
     });
 });
+
 
 function speakText() {
     var text = document.getElementById('textToSpeak').value;
@@ -34,60 +52,3 @@ function speakText() {
 
     synth.speak(utterance);
 }
-
-let mediaRecorder;
-let audioChunks = [];
-let audioBlob;
-
-document.getElementById('startRecordingButton').addEventListener('click', () => {
-    navigator.mediaDevices.getUserMedia({ audio: true })
-        .then(stream => {
-            mediaRecorder = new MediaRecorder(stream);
-            audioChunks = [];
-
-            mediaRecorder.addEventListener('dataavailable', event => {
-                audioChunks.push(event.data);
-            });
-
-            mediaRecorder.addEventListener('stop', () => {
-                audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
-                console.log(audioBlob.type);
-                const audioUrl = URL.createObjectURL(audioBlob);
-                document.getElementById('audioPlayback').src = audioUrl;
-                document.getElementById('sendAudioButton').disabled = false;
-            });
-
-            mediaRecorder.start();
-            document.getElementById('stopRecordingButton').disabled = false;
-        })
-        .catch(e => {
-            console.log('No se pudo acceder al micrófono: ', e);
-        });
-});
-
-document.getElementById('stopRecordingButton').addEventListener('click', () => {
-    if (mediaRecorder.state === 'recording') {
-        mediaRecorder.stop();
-        document.getElementById('stopRecordingButton').disabled = true;
-    }
-});
-
-// Evento para el botón de enviar audio
-document.getElementById('sendAudioButton').addEventListener('click', () => {
-    let formData = new FormData();
-    formData.append('audioBlob', audioBlob, 'recording.wav');
-    
-    fetch('/audio-to-text', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data.text); // Aquí puedes hacer algo con el texto reconocido
-    })
-    .catch(error => {
-        console.error(error);
-    });
-});
-
-

@@ -6,9 +6,6 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-main {
-    padding-bottom: 100px;
-}
 
 header {
     background-color: #f8f9fa; /* A light grey background */
@@ -22,6 +19,7 @@ nav {
     max-width: 1000px; /* Max width of the content, you can adjust this */
     margin: 0 auto; /* Center the nav in the page */
     padding: 15px 5%;
+
 }
 
 .nav-left, .nav-right {
@@ -56,13 +54,7 @@ nav {
     color:blue ; /* Underline on hover for visual feedback */
 }
 
-
 /* Añadir a tus estilos existentes */
-
-.hero {
-    text-align: center;
-    padding: 40px 20px; /* Ajustar según se necesite */
-}
 
 .button-container {
     display: flex;
@@ -134,7 +126,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
 }
@@ -143,3 +135,36 @@ footer {
     width: 32px;
     height: 32px;
 }
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#textToSpeak {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border: 2px solid #007BFF;
+    border-radius: 4px;
+    outline: none;
+}
+
+.speak-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.speak-button:hover {
+    background-color: #0056b3;
+}
+
