@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harveys!</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="icon" type="image/png" href="/static/images/micael-favicon.png">
+    
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="nav-left">
-            <img src="/static/images/michael.png" alt="Logo" id="nav-logo">
-            <a href="#what"><span>What</span><span>is this?</span></a>
-            <a href="#why"><span>Why</span><span>this app?</span></a>
-            <a href="#howmuch"><span>How much</span><span>Michael owe u?</span></a>
+    <header class="p-3 bg-white border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <img src="/static/images/michael.png" alt="Logo" width="40" height="" class="me-2">
+                </a>
+    
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#what" class="nav-link px-2 link-secondary">What is this?</a></li>
+                    <li><a href="#why" class="nav-link px-2 link-dark">Why this app?</a></li>
+                    <li><a href="#howmuch" class="nav-link px-2 link-dark">How much Michael owe u?</a></li>
+                </ul>
+    
+                <div class="text-end">
+                    <a href="#who" class="btn btn-outline-primary me-2">Who am I?</a>
+                    <a href="#contact" class="btn btn-primary">Want to tell me something?</a>
+                </div>
+            </div>
         </div>
-        <div class="nav-right">
-            <a href="#who"><span>Who</span><span>am I?</span></a>
-            <a href="#contact"><span>Want to</span><span>tell me something?</span></a>
-            <a href="#rate"><span>Rate</span><span>this app</span></a>
-        </div>
-    </nav>
-</header>
+    </header>
 
 <main>
     {% block content %}
@@ -42,6 +48,7 @@
 </footer>
 
 <script src="/static/js/script.js"></script>
+<<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

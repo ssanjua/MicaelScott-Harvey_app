@@ -11,47 +11,7 @@ header {
     border-bottom: 1px solid #e1e4e8; /* A bottom border for some visual separation */
 }
 
-nav {
-    display: flex;
-    justify-content: space-between; /* This will push the nav-left and nav-right apart */
-    align-items: center; /* This will vertically center the navigation links */
-    max-width: 1000px; /* Max width of the content, you can adjust this */
-    margin: 0 auto; /* Center the nav in the page */
-    padding: 15px 5%;
 
-}
-
-.nav-left, .nav-right {
-    display: flex;
-}
-
-.nav-left img {
-    height: 50px; /* Adjust the size of the logo */
-    margin-right: 20px; /* Margin between the logo and the first link */
-}
-
-.nav-left a, .nav-right a {
-    text-decoration: none; /* Remove the underline from links */
-    color: #7d7d7d; /* Dark grey color for the text */
-    margin-right: 20px;
-    font-weight: 500px;
-    padding: 10px 15px; /* Ajustar el espacio alrededor de los enlaces */
-    display: inline-block; /* Permite establecer un ancho y alto */
-}
-
-.nav-left a span, .nav-right a span {
-    display: block;
-}
-
-#nav-logo {
-    height: 60px; /* Ajustar según sea necesario */
-    margin-right: 20px;
-    width: auto; /* Mantiene la proporción del logo */
-}
-
-.nav-left a:hover, .nav-right a:hover {
-    color:blue ; /* Underline on hover for visual feedback */
-}
 
 .button-container {
     display: flex;
