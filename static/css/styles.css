@@ -6,7 +6,6 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-
 header {
     background-color: #f8f9fa; /* A light grey background */
     border-bottom: 1px solid #e1e4e8; /* A bottom border for some visual separation */
@@ -54,8 +53,6 @@ nav {
     color:blue ; /* Underline on hover for visual feedback */
 }
 
-/* Añadir a tus estilos existentes */
-
 .button-container {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -100,15 +97,13 @@ nav {
     height: auto;
 }
 
-#harveyMouthClosed, #harveyMouthOpen {
+#harveyMouthClosed, #harveyMouthOpen, #harveySleep {
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
     transition: display 0.2s ease-in-out;
 }
-
-
 
 .features {
     display: flex;
@@ -168,3 +163,12 @@ footer {
     background-color: #0056b3;
 }
 
+.text-to-speak {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border: 2px solid #007BFF;
+    border-radius: 4px;
+    outline: none;
+}
