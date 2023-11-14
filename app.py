@@ -7,16 +7,25 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-
 @app.route("/contact")
 def contact():
-    pass
+    return render_template("contact.html")
 
+@app.route("/test")
+def test():
+    return render_template("test.html")
 
-@app.route("/about")
-def about():
-    pass
+@app.route("/what")
+def what():
+    return render_template("what.html")
 
+@app.route("/who")
+def who():
+    return render_template("who.html")
+
+@app.route("/why")
+def why():
+    return render_template("why.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

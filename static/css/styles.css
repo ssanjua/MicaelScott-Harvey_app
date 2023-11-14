@@ -8,10 +8,8 @@ html, body {
 
 header {
     background-color: #f8f9fa; /* A light grey background */
-    border-bottom: 1px solid #e1e4e8; /* A bottom border for some visual separation */
+    border-bottom: 1px solid #e1e4e8; 
 }
-
-
 
 .button-container {
     display: flex;
@@ -22,7 +20,7 @@ header {
 
 #toggleInputButton {
     padding: 10px 20px;
-    background-color: #0b5ed7; /* Un azul llamativo */
+    background-color: #d7560b; /* Un azul llamativo */
     color: white;
     border: none;
     border-radius: 5px;
@@ -103,7 +101,7 @@ footer {
     padding: 10px;
     margin-right: 10px;
     font-size: 1rem;
-    border: 2px solid #007BFF;
+    border: 2px solid #b700ff;
     border-radius: 4px;
     outline: none;
 }
@@ -111,7 +109,7 @@ footer {
 .speak-button {
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: #007BFF;
+    background-color: rgb(0, 255, 8);
     color: white;
     border: none;
     border-radius: 4px;
@@ -120,7 +118,7 @@ footer {
 }
 
 .speak-button:hover {
-    background-color: #0056b3;
+    background-color: #30b300;
 }
 
 .text-to-speak {
@@ -128,7 +126,7 @@ footer {
     padding: 10px;
     margin-right: 10px;
     font-size: 1rem;
-    border: 2px solid #007BFF;
+    border: 2px solid #00ff5e;
     border-radius: 4px;
     outline: none;
 }

@@ -9,27 +9,26 @@
     
 </head>
 <body>
-
     <header class="p-3 bg-white border-bottom">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-                    <img src="/static/images/michael.png" alt="Logo" width="40" height="" class="me-2">
+                    <img src="/static/images/michael.png" alt="Logo" width="60" class="me-2">
                 </a>
     
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#what" class="nav-link px-2 link-secondary">What is this?</a></li>
-                    <li><a href="#why" class="nav-link px-2 link-dark">Why this app?</a></li>
-                    <li><a href="#howmuch" class="nav-link px-2 link-dark">How much Michael owe u?</a></li>
+                    <li><a href="/what" class="btn btn-secondary me-2">What is this?</a></li>
+                    <li><a href="/why" class="btn btn-outline-secondary me-2">Why this app?</a></li>
+                    <li><a href="/test" class="btn btn-outline-secondary me-2">How much Michael are you?</a></li>
                 </ul>
     
-                <div class="text-end">
-                    <a href="#who" class="btn btn-outline-primary me-2">Who am I?</a>
-                    <a href="#contact" class="btn btn-primary">Want to tell me something?</a>
+                <div class="d-flex flex-row"> <!-- Asegúrate de que esta sea la clase correcta -->
+                    <a href="/who" class="nav-link px-2 text-danger me-2">Who am I?</a> <!-- Cambié la clase para cambiar el color del texto -->
+                    <a href="/contact" class="nav-link px-2 text-dark me-2">Want to tell me something?</a> <!-- Cambié la clase para cambiar el color del texto -->
                 </div>
             </div>
         </div>
-    </header>
+    </header>    
 
 <main>
     {% block content %}
@@ -48,7 +47,7 @@
 </footer>
 
 <script src="/static/js/script.js"></script>
-<<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
