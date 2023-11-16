@@ -7,17 +7,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const harveyMouthClosed = document.getElementById('harveyMouthClosed');
     const harveyMouthOpen = document.getElementById('harveyMouthOpen');
     
-    let isInputVisible = false;
 
     toggleInputButton.addEventListener('click', () => {
-        isInputVisible = !isInputVisible;
-        inputContainer.style.display = isInputVisible ? 'block' : 'none';
-        harveySleep.style.display = isInputVisible ? 'none' : 'block';
-        harveyMouthClosed.style.display = isInputVisible ? 'block' : 'none';
-        if (isInputVisible) {
-            textInput.focus();
-        }
-    });
+        // Comprobamos si el input está "encogido"
+            // Si no está definido o es el ancho mínimo, expande el contenedor
+            if (!inputContainer.style.width || inputContainer.style.width === "30px") {
+                inputContainer.style.width = "70%"; // El tamaño al que se expandirá
+                textInput.style.opacity = 1;
+                toggleVisibilityButton.style.opacity = 1;
+                harveyMouthClosed.style.display = 'block';
+                harveySleep.style.display = 'none';
+            } else {
+                // Si está expandido, lo "encogemos" de nuevo
+                inputContainer.style.width = "30px"; // El tamaño "encogido"
+                textInput.style.opacity = 0;
+                toggleVisibilityButton.style.opacity = 0;
+                harveyMouthClosed.style.display = 'none';
+                harveySleep.style.display = 'block';
+    }
+});
 
     toggleVisibilityButton.addEventListener('click', () => {
         if (textInput.type === 'text') {

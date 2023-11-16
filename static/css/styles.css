@@ -1,3 +1,4 @@
+/* Estilos Generales */
 html, body {
     padding: 0;
     margin: 0;
@@ -6,81 +7,108 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
+/* Header */
 header {
     background-color: #f8f9fa; /* A light grey background */
-    border-bottom: 1px solid #e1e4e8; 
+    border-bottom: 1px solid #e1e4e8;
 }
 
+/* Centrado de Contenido */
+h1, p, .button-container {
+    text-align: center;
+}
+
+/* Botones */
 .button-container {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    padding: 10px 0; /* Espacio arriba y abajo del botón */
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
 }
 
 #toggleInputButton {
     padding: 10px 20px;
-    background-color: #d7560b; /* Un azul llamativo */
+    background-color: #d7560b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10px; /* Si es necesario, ajustar el espacio sobre el botón */
+    margin-top: 10px;
 }
 
 #toggleInputButton:hover {
-    background-color: #c80a2d; /* Un tono más oscuro al pasar el ratón */
+    background-color: #c80a2d;
 }
-  
+
+/* Contenedor de Input - encogido por defecto y centrado */
 #inputContainer {
-    margin-top: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Centrado con auto */
+    width: 30px;
+    transition: width 0.5s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Estilos para input y botón de visibilidad */
+#textToSpeak, #toggleVisibilityButton {
+    transition: opacity 0.5s ease 0.5s;
 }
 
 #textToSpeak {
-    width: 70%; /* Ajustar según se necesite */
+    width: 100%;
     padding: 10px;
-    font-size: 16px; /* Tamaño de la fuente */
-    margin-top: 10px; /* Espacio antes del input */
-    border: 1px solid #ddd; /* Borde sutil para el input */
+    font-size: 16px;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
+.text-to-speak {
+    max-width: 60%;
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border: 2px solid #00e1ff;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Contenedor de Harvey */
 #harveyContainer {
     margin: 10px auto;
     max-width: 300px;
-    min-width: 100px;
     width: 80%;
     height: auto;
 }
 
 #harveyMouthClosed, #harveyMouthOpen, #harveySleep {
-    top: 0;
-    left: 0;
     width: 100%;
     height: auto;
     transition: display 0.2s ease-in-out;
 }
 
+/* Estilos de la Sección Características */
 .features {
     display: flex;
     justify-content: space-around;
-    padding: 40px 20px; /* Ajustar según se necesite */
+    padding: 40px 20px;
     clear: both;
-    }
-
-.features section {
-    max-width: 300px; /* Ajustar según se necesite */
 }
 
+.features section {
+    max-width: 300px;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    /* position: fixed; */
-    bottom: 0;
     width: 100%;
 }
 
@@ -89,44 +117,9 @@ footer {
     height: 32px;
 }
 
-.input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-}
-
-#textToSpeak {
-    flex-grow: 1;
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 1rem;
-    border: 2px solid #b700ff;
-    border-radius: 4px;
-    outline: none;
-}
-
-.speak-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: rgb(0, 255, 8);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    outline: none;
-}
-
-.speak-button:hover {
-    background-color: #30b300;
-}
-
-.text-to-speak {
-    flex-grow: 1;
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 1rem;
-    border: 2px solid #00ff5e;
-    border-radius: 4px;
-    outline: none;
+/* Estilos Responsivos para Inputs */
+@media (max-width: 768px) {
+    .input-container {
+        flex-direction: column;
+    }
 }

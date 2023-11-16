@@ -1,10 +1,17 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+  <div class="title-container">
+    <h1>HEY JIM, COME HERE PLEASE...</h1>
+    <p>Press Michael</p>
+  </div>
       
   <!-- Botón para desplegar el input -->
     <div class="button-container">
-        <button id="toggleInputButton">&lt; Push me &gt;</button>
+        <button id="toggleInputButton">
+          <img src="/static/images/michael_botton.png" width=55px; alt="Michael Icon" />
+        </button>
     </div>
 
     <div id="harveyContainer">
@@ -14,26 +21,26 @@
     </div>
 
     <!-- Input de texto inicialmente oculto -->
-    <div class="input-container" id="inputContainer" style="display:none;">
+    <div class="input-container" id="inputContainer">
       <input type="text" id="textToSpeak" placeholder="Me so horney me love you long tim...">
       <button id="toggleVisibilityButton">&#128065;</button> <!-- Emoji de ojo abierto -->
     </div>
     
     <div class="button-container">
-      <button id="toggleInputButton">&lt; Try this &gt;</button>
+      <h3>&lt; Try this &gt;</h3>
     </div>
 
     <div class="input-container">
       <input type="text" class="text-to-speak" id="horney" value="Me so horney me love you long tim..." readonly>
-      <button class="try-button">Try</button>
+      <button class="try-button">▶️​</button>
     </div>
     <div class="input-container">
       <input type="text" class="text-to-speak" id="ies" value="i i i i i,i,i,i,i i i i i i,i,i,i,i i i i" readonly>
-      <button class="try-button">Try</button>
+      <button class="try-button">▶️​</button>
     </div>
     <div class="input-container">
       <input type="text" class="text-to-speak" id="eses" value="s,s,s, ssss, s,s,s, ssss" readonly>
-      <button class="try-button">Try</button>
+      <button class="try-button">▶️​</button>
     </div>
     
     
