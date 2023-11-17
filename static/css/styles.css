@@ -41,40 +41,57 @@ h1, p, .button-container {
     background-color: #c80a2d;
 }
 
-/* Contenedor de Input - encogido por defecto y centrado */
-#inputContainer {
+.input-group {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto; /* Centrado con auto */
-    width: 30px;
-    transition: width 0.5s ease;
-    overflow: hidden;
-    white-space: nowrap;
+    width: 100%; /* O el ancho que prefieras */
+    margin: 0 auto; /* Centrado horizontalmente */
+    transition: all 0.3s; /* Transición suave para cambios */
 }
 
-/* Estilos para input y botón de visibilidad */
-#textToSpeak, #toggleVisibilityButton {
-    transition: opacity 0.5s ease 0.5s;
+.shared-input-style {
+    width: 100%; 
+    padding: .375rem .75rem; 
+    font-size: 1rem; 
+    border: 1px solid #ced4da; 
+    border-radius: .25rem; 
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
-#textToSpeak {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+#inputContainer {
+    width: 50px;
+    margin: auto; /* Centra horizontalmente */
 }
 
-.text-to-speak {
-    max-width: 60%;
-    flex-grow: 1;
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 1rem;
-    border: 2px solid #00e1ff;
-    border-radius: 4px;
-    outline: none;
+.button-container {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#toggleVisibilityButton {
+    transition: visibility 0s, opacity 0.5s linear;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    color: #000;
+    display: none;
+}
+
+.input-group.input-encogido #toggleVisibilityButton {
+    opacity: 0; 
+}
+
+.input-group:not(.input-encogido) #toggleVisibilityButton {
+    visibility: visible; 
+    opacity: 1;
+}
+
+.try-input-container {
+    width: auto; 
 }
 
 /* Contenedor de Harvey */

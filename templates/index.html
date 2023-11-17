@@ -20,28 +20,35 @@
       <img src="/static/images/harvey_mouthOpen.png" alt="Harvey Mouth Open" id="harveyMouthOpen" style="display: none;">
     </div>
 
-    <!-- Input de texto inicialmente oculto -->
-    <div class="input-container" id="inputContainer">
-      <input type="text" id="textToSpeak" placeholder="Me so horney me love you long tim...">
-      <button id="toggleVisibilityButton">&#128065;</button> <!-- Emoji de ojo abierto -->
-    </div>
+    <!-- Input de texto -->
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-8">
+              <!-- Input de texto para usuario que se expande y contrae -->
+              <div class="input-group input-encogido mb-3" id="inputContainer">
+                <input type="text" id="textToSpeak" class="form-control shared-input-style" placeholder="Me so horney me love you long tim...">
+                <button id="toggleVisibilityButton" class="btn btn-outline-secondary">&#128065;</button>
+              </div>
     
-    <div class="button-container">
-      <h3>&lt; Try this &gt;</h3>
-    </div>
+              <h3 class="text-center mb-3">Try this</h3>
+    
+              <!-- Inputs de la sección 'Try this' -->
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="horney" value="Me so horney me love you long tim..." readonly>
+                  <button class="try-button btn btn-dark">▶️</button>
+              </div> 
 
-    <div class="input-container">
-      <input type="text" class="text-to-speak" id="horney" value="Me so horney me love you long tim..." readonly>
-      <button class="try-button">▶️​</button>
-    </div>
-    <div class="input-container">
-      <input type="text" class="text-to-speak" id="ies" value="i i i i i,i,i,i,i i i i i i,i,i,i,i i i i" readonly>
-      <button class="try-button">▶️​</button>
-    </div>
-    <div class="input-container">
-      <input type="text" class="text-to-speak" id="eses" value="s,s,s, ssss, s,s,s, ssss" readonly>
-      <button class="try-button">▶️​</button>
-    </div>
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="ies" value="i i i i i,i,i,i,i i i i i i,i,i,i,i i i i" readonly>
+                  <button class="try-button btn btn-dark">▶️</button>
+              </div>
+              <div class="input-group mb-3">
+                  <input type="text" class="form-control" id="eses" value="s,s,s, ssss, s,s,s, ssss" readonly>
+                  <button class="try-button btn btn-dark">▶️</button>
+              </div>
+          </div>
+      </div>
+  </div>
     
     
   <div class="features">

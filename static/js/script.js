@@ -7,47 +7,44 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const harveyMouthClosed = document.getElementById('harveyMouthClosed');
     const harveyMouthOpen = document.getElementById('harveyMouthOpen');
     
-
     toggleInputButton.addEventListener('click', () => {
-        // Comprobamos si el input está "encogido"
-            // Si no está definido o es el ancho mínimo, expande el contenedor
-            if (!inputContainer.style.width || inputContainer.style.width === "30px") {
-                inputContainer.style.width = "70%"; // El tamaño al que se expandirá
-                textInput.style.opacity = 1;
-                toggleVisibilityButton.style.opacity = 1;
-                harveyMouthClosed.style.display = 'block';
-                harveySleep.style.display = 'none';
-            } else {
-                // Si está expandido, lo "encogemos" de nuevo
-                inputContainer.style.width = "30px"; // El tamaño "encogido"
-                textInput.style.opacity = 0;
-                toggleVisibilityButton.style.opacity = 0;
-                harveyMouthClosed.style.display = 'none';
-                harveySleep.style.display = 'block';
-    }
-});
+        if (inputContainer.classList.contains('input-encogido')) {
+            inputContainer.classList.remove('input-encogido');
+            inputContainer.style.width = "100%"; // Expande
+            // Esperamos a que se complete la animación antes de mostrar el botón de visibilidad
+            setTimeout(() => {
+                toggleVisibilityButton.style.display = "inline-block"; // O // Muestra el botón
+                textInput.focus(); // Enfoca el input
+            }, 300); // Ajusta este tiempo al de la duración de tu transición
+        } else {
+            inputContainer.classList.add('input-encogido');
+            inputContainer.style.width = "50px"; // Encoge
+            toggleVisibilityButton.style.display = "none"; // Oculta el botón usando Bootstrap class
+        }
+
+        // Actualiza la visibilidad de Harvey
+        harveyMouthClosed.style.display = inputContainer.classList.contains('input-encogido') ? 'none' : 'block';
+        harveySleep.style.display = inputContainer.classList.contains('input-encogido') ? 'block' : 'none';
+        harveyMouthOpen.style.display = 'none'; // La boca abierta siempre oculta
+    });
 
     toggleVisibilityButton.addEventListener('click', () => {
-        if (textInput.type === 'text') {
-            textInput.type = 'password';
-            toggleVisibilityButton.innerHTML = '&#128584;'; // Ojo abierto
-        } else {
-            textInput.type = 'text';
-            toggleVisibilityButton.innerHTML = '&#128065;'; // Ojo cerrado (o cualquier otro icono que prefieras)
-        }
-        textInput.focus(); 
+        const isTextVisible = textInput.type === 'text';
+        textInput.type = isTextVisible ? 'password' : 'text';
+        toggleVisibilityButton.innerHTML = isTextVisible ? '&#128584;' : '&#128065;'; // Cambiar el ícono del ojo
+        textInput.focus(); // Mantener el enfoque en el input
     });
 
     textInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
             speakText(textInput.value);
-            event.preventDefault(); // Prevenir cualquier acción predeterminada del Enter
+            event.preventDefault(); // Evitar el comportamiento predeterminado del Enter
         }
     });
 
     document.querySelectorAll('.try-button').forEach(button => {
         button.addEventListener('click', function() {
-            var textToSay = this.previousElementSibling.value; // Obtiene el valor del input hermano anterior
+            const textToSay = this.previousElementSibling.value; // Obtener el valor del input hermano anterior
             speakText(textToSay);
         });
     });
