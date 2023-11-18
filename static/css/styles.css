@@ -4,7 +4,17 @@ html, body {
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900; /* Use the bold weight for headings */
+}
+
+p, li, a, input, button { /* Add other selectors as needed */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Regular weight for other text */
 }
 
 /* Header */
@@ -13,9 +23,77 @@ header {
     border-bottom: 1px solid #e1e4e8;
 }
 
-/* Centrado de Contenido */
-h1, p, .button-container {
-    text-align: center;
+.navbar-nav .nav-item {
+    margin-right: 0.5rem; /* Espaciado a la derecha de cada elemento li */
+}
+
+/* Asegurarse de que el último elemento no tenga un margen a la derecha */
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-nav .nav-item .btn:hover {
+    color: white;
+}
+
+/* Para los botones con clase 'btn-outline-danger' asegúrate de cambiar también el fondo en el hover para que el texto blanco sea visible */
+.navbar-nav .nav-item .btn-outline-danger:hover {
+    background-color: #dc3545; /* Color de fondo rojo de Bootstrap para el estado hover */
+    border-color: #dc3545; /* Asegúrate de que el borde también cambie al mismo color de fondo */
+}
+
+.title-container {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 80px;
+}
+
+.title-container h1 {
+    font-size: 2.5rem; /* Adjust the size as needed */
+    margin-bottom: 0.5rem;
+  }  
+
+.gif-img {
+    max-width: 100%; /* ensures that the image is responsive and doesn't overflow its container */
+    height: auto; /* maintains the aspect ratio */
+    max-height: 200px; 
+}
+
+@media (max-width: 991px) {
+    .title-container .col-md-8,
+    .title-container .col-md-4 {
+        padding: 0; /* Remove padding for tighter spacing */
+    }
+    .title-container h1 {
+      font-size: 2rem; /* Slightly smaller font size */
+    }
+
+    .title-container .d-flex {
+      justify-content: center !important; /* Override Bootstrap's justify-content-end */
+    }
+}
+
+/* Stack elements vertically on small devices and adjust sizes */
+@media (max-width: 700px) {
+    .title-container .row {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .title-container h1 {
+        font-size: 1.75rem; /* Even smaller font size */
+    }
+
+    .gif-img {
+        max-height: 150px; /* Further adjust GIF size */
+        order: -1; /* Move GIF above the title on small screens */
+    }
+}
+
+hr {
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* Botones */
@@ -23,22 +101,23 @@ h1, p, .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
 }
+
 
 #toggleInputButton {
     padding: 10px 20px;
-    background-color: #d7560b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
+    align-items: center; 
+    justify-content: center;
 }
 
-#toggleInputButton:hover {
-    background-color: #c80a2d;
+.button-text {
+    font-size: 0.75rem; /* Reduce el tamaño de la fuente */
+    color: inherit; /* Hereda el color de texto del botón */
 }
 
 .input-group {
@@ -47,8 +126,18 @@ h1, p, .button-container {
     align-items: center;
     width: 100%; /* O el ancho que prefieras */
     margin: 0 auto; /* Centrado horizontalmente */
-    transition: all 0.3s; /* Transición suave para cambios */
+    transition: all 0.5s; /* Transición suave para cambios */
 }
+
+#inputContainer {
+    width: 100%; /* Full width */
+    background-color: #f7f7f7; /* Subtle gray background */
+    border-radius: 15px; /* Rounded corners */
+    margin: 40px auto; /* Top and bottom margin */
+    padding: 25px; /* Padding inside the container */
+    border: 1px solid #dce0e4; 
+}
+
 
 .shared-input-style {
     width: 100%; 
@@ -62,8 +151,13 @@ h1, p, .button-container {
 }
 
 #inputContainer {
-    width: 50px;
+    width: 95px;
     margin: auto; /* Centra horizontalmente */
+}
+
+#textToSpeak {
+    padding: 20px; /* Aumenta el espacio alrededor del texto dentro del input */
+    height: 50px; /* Ajusta esto para cambiar la altura total del input */
 }
 
 .button-container {    
@@ -76,7 +170,6 @@ h1, p, .button-container {
 #toggleVisibilityButton {
     transition: visibility 0s, opacity 0.5s linear;
     border: 1px solid #ced4da;
-    background-color: #fff;
     color: #000;
     display: none;
 }
@@ -91,10 +184,16 @@ h1, p, .button-container {
 }
 
 .try-input-container {
-    width: auto; 
+    width: 47%; 
 }
 
-/* Contenedor de Harvey */
+.try-input-container .form-control {
+    background-color: #fafafa; 
+    border: 1px solid #ddd; 
+    padding: 20px;
+    height: 15px;
+}
+
 #harveyContainer {
     margin: 10px auto;
     max-width: 300px;
@@ -108,25 +207,48 @@ h1, p, .button-container {
     transition: display 0.2s ease-in-out;
 }
 
-/* Estilos de la Sección Características */
 .features {
     display: flex;
     justify-content: space-around;
-    padding: 40px 20px;
-    clear: both;
+    flex-wrap: wrap;
 }
 
 .features section {
     max-width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Footer */
+.features section img {
+    max-width: 100%; /* Hace que la imagen sea responsive y no exceda el ancho de la sección */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 10px; /* Añade un poco de espacio debajo de la imagen */
+}
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
     width: 100%;
+}
+
+footer p {
+    margin-bottom: 20px; /* Espacio debajo del texto de contacto */
+}
+
+.social-icons {
+    display: flex; /* Organiza los íconos en línea */
+    justify-content: center; /* Centra los íconos horizontalmente */
+    align-items: center; /* Centra los íconos verticalmente */
+    gap: 20px; /* Espacio entre los íconos */
+}
+
+.social-icons a {
+    display: inline-block; /* Para aplicar padding y margenes correctamente */
+    padding: 8px; /* Espacio alrededor de los íconos */
 }
 
 .social-icons img {
@@ -134,9 +256,35 @@ footer {
     height: 32px;
 }
 
+.social-icons img {
+    filter: invert(1); /* Invierte los colores para que si son negros pasen a blancos */
+    width: 32px; /* Ancho fijo */
+    height: 32px; /* Alto fijo */
+    transition: transform 0.3s; /* Suaviza la transformación */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón por encima */
+}
+
+.contact-container {
+    padding-top: 60px;
+    max-width: 800px;
+}
+
 /* Estilos Responsivos para Inputs */
 @media (max-width: 768px) {
     .input-container {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center; /* Centra las secciones verticalmente en pantallas pequeñas */
+    }
+    .features section {
+        width: 80%; /* Ajusta el ancho de las secciones en pantallas más pequeñas */
     }
 }

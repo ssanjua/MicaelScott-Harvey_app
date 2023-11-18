@@ -6,29 +6,47 @@
     <title>Harveys!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="icon" type="image/png" href="/static/images/micael-favicon.png">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="p-3 bg-white border-bottom">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-                    <img src="/static/images/michael.png" alt="Logo" width="60" class="me-2">
+    <header class="bg-white border-bottom fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Brand/logo -->
+                <a class="navbar-brand" href="/">
+                    <img src="/static/images/michael.png" alt="Logo" width="60">
                 </a>
-    
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="/what" class="btn btn-secondary me-2">What is this?</a></li>
-                    <li><a href="/why" class="btn btn-outline-secondary me-2">Why this app?</a></li>
-                    <li><a href="/test" class="btn btn-outline-secondary me-2">How much Michael are you?</a></li>
-                </ul>
-    
-                <div class="d-flex flex-row"> <!-- Asegúrate de que esta sea la clase correcta -->
-                    <a href="/who" class="nav-link px-2 text-danger me-2">Who am I?</a> <!-- Cambié la clase para cambiar el color del texto -->
-                    <a href="/contact" class="nav-link px-2 text-dark me-2">Want to tell me something?</a> <!-- Cambié la clase para cambiar el color del texto -->
+                <!-- Toggler/collapsible Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="/what" class="nav-link btn btn-outline-danger">What is this?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/why" class="nav-link btn btn-danger">Why this app?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/test" class="nav-link btn btn-outline-danger">How much Michael are you?</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="/who" class="nav-link btn btn-secondary">Who am I?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact" class="nav-link btn btn-secondary">Want to tell me something?</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </header>    
+        </nav>
+    </header>   
 
 <main>
     {% block content %}
@@ -37,17 +55,17 @@
 </main>
 
 <footer>
-    <p>Contact me: mail@example.com | 2023</p>
+    <p>Contact me: ppaupallares@gmail.com | 2023</p>
     <div class="social-icons">
-        <a href="www.facebook.com"><img src="/static/images/square-facebook.svg" alt="Facebook"></a>
-        <a href="www.linkedin.com"><img src="/static/images/linkedin.svg" alt="LinkedIn"></a>
-        <a href="www.instagram.com"><img src="/static/images/square-instagram.svg" alt="Instagram"></a>
-        <a href="www.github.com"><img src="/static/images/square-github.svg" alt="GitHub"></a>
+        <a href="https://www.facebook.com/ppablahoney/" target="_blank"><img src="/static/images/square-facebook.svg" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/in/paupallares/" target="_blank"><img src="/static/images/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/ppupipallares" target="_blank"><img src="/static/images/square-instagram.svg" alt="Instagram"></a>
+        <a href="https://www.github.com/ssanjua" target="_blank"><img src="/static/images/square-github.svg" alt="GitHub"></a>
     </div>
 </footer>
 
 <script src="/static/js/script.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

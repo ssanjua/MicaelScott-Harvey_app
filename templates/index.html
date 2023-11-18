@@ -2,15 +2,26 @@
 
 {% block content %}
 
-  <div class="title-container">
-    <h1>HEY JIM, COME HERE PLEASE...</h1>
-    <p>Press Michael</p>
+  <div class="title-container my-5">
+    <div class="row align-items-center">
+      <!-- Title and subtitle -->
+      <div class="col-md-8 col-lg-6">
+        <h1>HEY JIM, CAN YOU COME IN HERE PLEASE...</h1>
+      </div>
+      <!-- Space for the GIF -->
+      <div class="col-md-4 col-lg-6 d-flex justify-content-end">
+        <img src="https://media3.giphy.com/media/DtUSavjVaACGdL2iH8/giphy.gif?cid=ecf05e477gplunialxtltxd7v9gxb19d0f94bsylp9bxxn34&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Jim GIF" class="img-fluid gif-img">
+      </div>
+    </div>
   </div>
+
+  <hr>
       
   <!-- Botón para desplegar el input -->
     <div class="button-container">
-        <button id="toggleInputButton">
-          <img src="/static/images/michael_botton.png" width=55px; alt="Michael Icon" />
+        <button id="toggleInputButton" class="btn btn-danger">
+          <img src="/static/images/michael_botton.png" width=55px; alt="Michael Icon"/>
+          <p>push me</p>
         </button>
     </div>
 
@@ -26,43 +37,49 @@
           <div class="col-md-8">
               <!-- Input de texto para usuario que se expande y contrae -->
               <div class="input-group input-encogido mb-3" id="inputContainer">
-                <input type="text" id="textToSpeak" class="form-control shared-input-style" placeholder="Me so horney me love you long tim...">
+                <input type="text" id="textToSpeak" class="form-control shared-input-style" placeholder="🤖​ I'm Harvey, a computer, Jim sucks...">
                 <button id="toggleVisibilityButton" class="btn btn-outline-secondary">&#128065;</button>
               </div>
+
+              <hr>
     
               <h3 class="text-center mb-3">Try this</h3>
     
               <!-- Inputs de la sección 'Try this' -->
-              <div class="input-group mb-3">
+              <div class="input-group try-input-container mb-3">
                   <input type="text" class="form-control" id="horney" value="Me so horney me love you long tim..." readonly>
-                  <button class="try-button btn btn-dark">▶️</button>
+                  <button class="try-button btn btn-danger">▶️</button>
               </div> 
 
-              <div class="input-group mb-3">
+              <div class="input-group try-input-container mb-3">
                   <input type="text" class="form-control" id="ies" value="i i i i i,i,i,i,i i i i i i,i,i,i,i i i i" readonly>
-                  <button class="try-button btn btn-dark">▶️</button>
+                  <button class="try-button btn btn-danger">▶️</button>
               </div>
-              <div class="input-group mb-3">
+              <div class="input-group try-input-container mb-3">
                   <input type="text" class="form-control" id="eses" value="s,s,s, ssss, s,s,s, ssss" readonly>
-                  <button class="try-button btn btn-dark">▶️</button>
+                  <button class="try-button btn btn-danger">▶️</button>
               </div>
           </div>
       </div>
   </div>
     
+  <hr>
     
   <div class="features">
     <section>
-      <h2>He can talk!</h2>
-      <p>Harvey is Michael's own Robot.</p>
+      <h2>He can talk! 🤖</h2>
+      <p>Harvey is Michael's own Robot and you are the boss!</p>
+      <img src="https://media2.giphy.com/media/dsKnRuALlWsZG/giphy.gif?cid=ecf05e47w9pqn40ela618u9oltciitcjtn7h083p7sa6t5hp&ep=v1_gifs_search&rid=giphy.gif&ct=g"/>
     </section>
     <section>
-      <h2>Hide!</h2>
-      <p>Hide what you want to say.</p>
+      <h2>Hide! &#128065;</h2>
+      <p>Hide what you want to say in case you want to say something stup!d</p>
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjlicGxsdHByNGJvejk2aWtzbnl0eWhmMGMxNnNjbjRyeTIyNmp3dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xMGh0bajSyNdC/giphy.gif"/>
     </section>
     <section>
       <h2>Take a test!</h2>
-      <p>Discover how much of Michael are in your heart.</p>
+      <p>Discover how much of Michael are in your heart with this fun test.</p>
+      <img src="https://media2.giphy.com/media/qNzamLsqvp3zi/giphy.gif?cid=ecf05e47z0vteqlduf3r5u8ffg0mopilk35ydd23pkz3it7b&ep=v1_gifs_related&rid=giphy.gif&ct=g"/>
     </section>
   </div>
 

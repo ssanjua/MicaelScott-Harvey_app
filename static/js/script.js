@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }, 300); // Ajusta este tiempo al de la duración de tu transición
         } else {
             inputContainer.classList.add('input-encogido');
-            inputContainer.style.width = "50px"; // Encoge
+            inputContainer.style.width = "95px"; // Encoge
             toggleVisibilityButton.style.display = "none"; // Oculta el botón usando Bootstrap class
         }
 
