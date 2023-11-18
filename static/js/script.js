@@ -10,41 +10,41 @@ document.addEventListener('DOMContentLoaded', (event) => {
     toggleInputButton.addEventListener('click', () => {
         if (inputContainer.classList.contains('input-encogido')) {
             inputContainer.classList.remove('input-encogido');
-            inputContainer.style.width = "100%"; // Expande
-            // Esperamos a que se complete la animación antes de mostrar el botón de visibilidad
+            inputContainer.style.width = "100%";
+            
             setTimeout(() => {
-                toggleVisibilityButton.style.display = "inline-block"; // O // Muestra el botón
-                textInput.focus(); // Enfoca el input
-            }, 300); // Ajusta este tiempo al de la duración de tu transición
+                toggleVisibilityButton.style.display = "inline-block"; 
+                textInput.focus(); 
+            }, 300); // transition
         } else {
             inputContainer.classList.add('input-encogido');
-            inputContainer.style.width = "95px"; // Encoge
-            toggleVisibilityButton.style.display = "none"; // Oculta el botón usando Bootstrap class
+            inputContainer.style.width = "95px"; 
+            toggleVisibilityButton.style.display = "none"; 
         }
 
-        // Actualiza la visibilidad de Harvey
+        // Harvey
         harveyMouthClosed.style.display = inputContainer.classList.contains('input-encogido') ? 'none' : 'block';
         harveySleep.style.display = inputContainer.classList.contains('input-encogido') ? 'block' : 'none';
-        harveyMouthOpen.style.display = 'none'; // La boca abierta siempre oculta
+        harveyMouthOpen.style.display = 'none'; 
     });
 
     toggleVisibilityButton.addEventListener('click', () => {
         const isTextVisible = textInput.type === 'text';
         textInput.type = isTextVisible ? 'password' : 'text';
-        toggleVisibilityButton.innerHTML = isTextVisible ? '&#128584;' : '&#128065;'; // Cambiar el ícono del ojo
-        textInput.focus(); // Mantener el enfoque en el input
+        toggleVisibilityButton.innerHTML = isTextVisible ? '&#128584;' : '&#128065;'; 
+        textInput.focus(); 
     });
 
     textInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
             speakText(textInput.value);
-            event.preventDefault(); // Evitar el comportamiento predeterminado del Enter
+            event.preventDefault(); 
         }
     });
 
     document.querySelectorAll('.try-button').forEach(button => {
         button.addEventListener('click', function() {
-            const textToSay = this.previousElementSibling.value; // Obtener el valor del input hermano anterior
+            const textToSay = this.previousElementSibling.value; 
             speakText(textToSay);
         });
     });

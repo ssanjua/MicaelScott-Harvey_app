@@ -1,4 +1,3 @@
-/* Estilos Generales */
 html, body {
     padding: 0;
     margin: 0;
@@ -9,25 +8,24 @@ html, body {
 
 h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 900; /* Use the bold weight for headings */
+    font-weight: 900; 
 }
 
-p, li, a, input, button { /* Add other selectors as needed */
+p, li, a, input, button { 
     font-family: 'Roboto', sans-serif;
-    font-weight: 400; /* Regular weight for other text */
+    font-weight: 400; 
 }
 
 /* Header */
 header {
-    background-color: #f8f9fa; /* A light grey background */
+    background-color: #f8f9fa;
     border-bottom: 1px solid #e1e4e8;
 }
 
 .navbar-nav .nav-item {
-    margin-right: 0.5rem; /* Espaciado a la derecha de cada elemento li */
+    margin-right: 0.5rem; 
 }
 
-/* Asegurarse de que el último elemento no tenga un margen a la derecha */
 .navbar-nav .nav-item:last-child {
     margin-right: 0;
 }
@@ -36,10 +34,9 @@ header {
     color: white;
 }
 
-/* Para los botones con clase 'btn-outline-danger' asegúrate de cambiar también el fondo en el hover para que el texto blanco sea visible */
 .navbar-nav .nav-item .btn-outline-danger:hover {
-    background-color: #dc3545; /* Color de fondo rojo de Bootstrap para el estado hover */
-    border-color: #dc3545; /* Asegúrate de que el borde también cambie al mismo color de fondo */
+    background-color: #dc3545; 
+    border-color: #dc3545; 
 }
 
 .title-container {
@@ -49,43 +46,43 @@ header {
 }
 
 .title-container h1 {
-    font-size: 2.5rem; /* Adjust the size as needed */
+    font-size: 2.5rem; 
     margin-bottom: 0.5rem;
   }  
 
 .gif-img {
-    max-width: 100%; /* ensures that the image is responsive and doesn't overflow its container */
-    height: auto; /* maintains the aspect ratio */
+    max-width: 100%; 
+    height: auto; 
     max-height: 200px; 
 }
 
 @media (max-width: 991px) {
     .title-container .col-md-8,
     .title-container .col-md-4 {
-        padding: 0; /* Remove padding for tighter spacing */
+        padding: 0; 
     }
     .title-container h1 {
-      font-size: 2rem; /* Slightly smaller font size */
+      font-size: 2rem; 
     }
 
     .title-container .d-flex {
-      justify-content: center !important; /* Override Bootstrap's justify-content-end */
+      justify-content: center !important; 
     }
 }
 
 /* Stack elements vertically on small devices and adjust sizes */
 @media (max-width: 700px) {
     .title-container .row {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column;
     }
 
     .title-container h1 {
-        font-size: 1.75rem; /* Even smaller font size */
+        font-size: 1.75rem; 
     }
 
     .gif-img {
-        max-height: 150px; /* Further adjust GIF size */
-        order: -1; /* Move GIF above the title on small screens */
+        max-height: 150px; 
+        order: -1; 
     }
 }
 
@@ -96,7 +93,6 @@ hr {
     padding-bottom: 10px;
 }
 
-/* Botones */
 .button-container {
     display: flex;
     justify-content: center;
@@ -116,25 +112,25 @@ hr {
 }
 
 .button-text {
-    font-size: 0.75rem; /* Reduce el tamaño de la fuente */
-    color: inherit; /* Hereda el color de texto del botón */
+    font-size: 0.75rem; 
+    color: inherit; 
 }
 
 .input-group {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* O el ancho que prefieras */
-    margin: 0 auto; /* Centrado horizontalmente */
-    transition: all 0.5s; /* Transición suave para cambios */
+    width: 100%; 
+    margin: 0 auto; 
+    transition: all 0.5s; 
 }
 
 #inputContainer {
     width: 100%; /* Full width */
-    background-color: #f7f7f7; /* Subtle gray background */
-    border-radius: 15px; /* Rounded corners */
-    margin: 40px auto; /* Top and bottom margin */
-    padding: 25px; /* Padding inside the container */
+    background-color: #f7f7f7; 
+    border-radius: 15px; 
+    margin: 40px auto; 
+    padding: 25px; 
     border: 1px solid #dce0e4; 
 }
 
@@ -152,12 +148,12 @@ hr {
 
 #inputContainer {
     width: 95px;
-    margin: auto; /* Centra horizontalmente */
+    margin: auto; 
 }
 
 #textToSpeak {
-    padding: 20px; /* Aumenta el espacio alrededor del texto dentro del input */
-    height: 50px; /* Ajusta esto para cambiar la altura total del input */
+    padding: 20px; 
+    height: 50px; 
 }
 
 .button-container {    
@@ -222,9 +218,9 @@ hr {
 }
 
 .features section img {
-    max-width: 100%; /* Hace que la imagen sea responsive y no exceda el ancho de la sección */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-bottom: 10px; /* Añade un poco de espacio debajo de la imagen */
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 10px; 
 }
 
 footer {
@@ -236,19 +232,19 @@ footer {
 }
 
 footer p {
-    margin-bottom: 20px; /* Espacio debajo del texto de contacto */
+    margin-bottom: 20px; 
 }
 
 .social-icons {
-    display: flex; /* Organiza los íconos en línea */
-    justify-content: center; /* Centra los íconos horizontalmente */
-    align-items: center; /* Centra los íconos verticalmente */
-    gap: 20px; /* Espacio entre los íconos */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
 }
 
 .social-icons a {
-    display: inline-block; /* Para aplicar padding y margenes correctamente */
-    padding: 8px; /* Espacio alrededor de los íconos */
+    display: inline-block;
+    padding: 8px; 
 }
 
 .social-icons img {
@@ -257,14 +253,14 @@ footer p {
 }
 
 .social-icons img {
-    filter: invert(1); /* Invierte los colores para que si son negros pasen a blancos */
-    width: 32px; /* Ancho fijo */
-    height: 32px; /* Alto fijo */
-    transition: transform 0.3s; /* Suaviza la transformación */
+    filter: invert(1); 
+    width: 32px; 
+    height: 32px; 
+    transition: transform 0.3s; 
 }
 
 .social-icons img:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón por encima */
+    transform: scale(1.1); 
 }
 
 .contact-container {
@@ -272,7 +268,7 @@ footer p {
     max-width: 800px;
 }
 
-/* Estilos Responsivos para Inputs */
+/* Responsive Inputs */
 @media (max-width: 768px) {
     .input-container {
         flex-direction: column;
@@ -282,9 +278,9 @@ footer p {
 @media (max-width: 768px) {
     .features {
         flex-direction: column;
-        align-items: center; /* Centra las secciones verticalmente en pantallas pequeñas */
+        align-items: center;
     }
     .features section {
-        width: 80%; /* Ajusta el ancho de las secciones en pantallas más pequeñas */
+        width: 80%; 
     }
 }
