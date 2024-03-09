@@ -1,7 +1,7 @@
 # HARVEY'S!
 
 ## Video Demo
-[soon]
+[[soon]](https://youtu.be/9nXd8PVqReY)
 
 ## Description
 Welcome to Harvey's, a fun and interactive web application that brings text to life through text-to-speech technology. This project was developed as my final submission for CS50x, Harvard University's Introduction to Computer Science course.
