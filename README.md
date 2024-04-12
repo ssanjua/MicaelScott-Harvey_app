@@ -1,7 +1,6 @@
 # HARVEY'S!
 
 ## DEPLOY
-
 https://ssanjua.pythonanywhere.com
 
 ## Video Demo
